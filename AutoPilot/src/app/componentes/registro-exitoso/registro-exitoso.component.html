@@ -1,0 +1,34 @@
+<div class="container-padre">
+    <div class="container-msj">
+        <h2 class="txt-h2">Felicidades! Tu registro fue exitoso </h2>
+    </div>
+    <div class="container-login">
+        <h2 class="txt-h2">Hola! </h2>
+        <h3 class="txt-h3">Ingresa a tu cuenta</h3>
+        <div class="container-input">
+            
+             <div class="row" >
+
+                <mat-form-field>
+                <mat-label>Nombre de usuario o correo</mat-label>
+                <input matInput placeholder="pat@example.com" required [(ngModel)]="loginEx.usuarioOEmail" (input)=" loginEx.actualizarTipoEntrada()">
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput  [type]="hide ? 'password' : 'text'"  [(ngModel)]="loginEx.usuario.password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+              </mat-form-field>
+              <h3 class="olvide-h3" routerLink="/bienvenido">Olvide mi contraseña</h3>
+
+                <section>
+                    <div class="container-boton">
+                        <!-- <button  value="Registrar"mat-flat-button ><h3 class="registro-h3">Entrar</h3></button> -->
+                        <button  mat-flat-button   (click)="loginEx.ingresarApi()"  [disabled]="loginEx.usuarioOEmail == '' || loginEx.usuario.password == '' " >Iniciar Sesion</button>
+                    </div>
+                </section>
+              </div> 
+        </div>
+    </div>
+</div>

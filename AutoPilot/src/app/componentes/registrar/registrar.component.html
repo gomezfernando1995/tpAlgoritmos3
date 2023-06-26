@@ -1,0 +1,80 @@
+<div class="container-register">
+
+  <div class="container-uno">
+
+    <div class="card-preguntaUsuario">
+
+    </div>
+
+  </div>
+  <div class="container-dos">
+    <div class="card-registro">
+
+      <div class="card-form-cabezera">
+        <h2 class="txt-h2">Create una cuenta</h2>
+        <h3 class="txt-h3">Comenza a gestionar tus vehiculos</h3>
+      </div>
+      <!-- CARD PARA RETISTRO -->
+      <div class="card-form-cuerpo">
+        <form class="row" [formGroup]="this.miFormulario">
+          <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Telefono</mat-label>
+            <input class="tel" type="tel" matInput formControlName="telefono"
+              required>
+            <mat-error *ngIf="this.miFormulario.invalid">{{getErrorMessageTelefono()}}</mat-error>
+
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Ingrese su correo</mat-label>
+            <input matInput placeholder="pat@example.com"
+              formControlName="email">
+            <mat-error *ngIf="this.miFormulario.invalid">{{getErrorMessageEmail()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Nombre de usuario</mat-label>
+            <input matInput formControlName="nombreUsuario" required>
+            <mat-error *ngIf="this.miFormulario.invalid">{{getErrorMessageUsuario()}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'"
+              formControlName="password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="this.miFormulario.invalid">{{getErrorMessagePassword()}}</mat-error>
+          </mat-form-field>
+
+          <section class="check-terminosCondiciones">
+            <mat-checkbox color="primary" type="checkbox" class="example-margin"
+              formControlName="terminos"></mat-checkbox>
+            <h2>Al hacer click aceptas Terminos y Condiciones de AutoPilot</h2>
+            <mat-error *ngIf="this.miFormulario.invalid">{{getErrorMessageTerminos()}}</mat-error>
+          </section>
+          <section>
+            <div class="container-boton">
+              <button (click)="registrar()" value="Registrar" mat-flat-button
+                color="primary" [disabled]="!this.miFormulario.valid">Registrarse</button>
+            </div>
+          </section>
+        </form>
+
+      </div> <!--CARD REGITRO -->
+    </div>
+  </div>
+
+</div>

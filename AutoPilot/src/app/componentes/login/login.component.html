@@ -1,0 +1,114 @@
+<!-- 
+<div class="containerGrid">
+    <mat-grid-list cols="2" rowHeight="100%" rowWidth="80%">
+        <mat-grid-tile>
+
+            <img src="../../../assets/img/login.jpg" alt="taller">
+
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="login-form-flex">
+                <mat-card>
+                    <mat-card-title class="tarjetaTitulo"
+                        style="font-size: 1.5rem;">
+                        Bienvenido!
+                    </mat-card-title>
+                    <mat-card-content>
+                        <div class="example-container">
+                            <mat-form-field class="inputLogin">
+                                <mat-label>Ingrese correo</mat-label>
+                                <input matInput placeholder="pat@example.com"
+                                    [formControl]="email" required>
+                                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <br />
+                        <div class="example-container">
+                            <mat-form-field class="inputLogin">
+
+                                <mat-label>Ingrese contraseña</mat-label>
+                                <input matInput
+                                    [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix
+                                    (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'"
+                                    [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' :
+                                        'visibility'}}</mat-icon>
+                                </button>
+
+                            </mat-form-field>
+                         </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <div class="button-flex-container">
+                            <button mat-raised-button color="primary"
+                                class="btnIniciarSesion">Iniciar sesión</button>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+
+        </mat-grid-tile>
+
+    </mat-grid-list>
+
+</div> -->
+<div class="container-register">
+
+    <div class="container-uno">
+
+        <div class="card-preguntaUsuario">
+               
+        </div>  
+
+
+    </div>
+    <div class="container-dos">
+        <div class="card-registro">
+
+            <div class="card-form-cabezera">
+                <h2 class="txt-h2">Bienvenido !</h2>
+                <h3 class="txt-h3">Si ya te registrastes podes ingresar con  tu nombre de usuario o email</h3>
+            </div>
+            <!-- CARD PARA RETISTRO -->
+            <div class="card-form-cuerpo"> 
+              
+                <div class="example-container">
+                    <mat-form-field class="inputLogin">
+                        <mat-label>Ingrese usuario o email</mat-label>
+                        
+                        <!-- <input matInput placeholder="pat@example.com"   required [(ngModel)]="usuario.nombreUsuario  "> -->
+                        <input matInput placeholder="pat@example.com" required [(ngModel)]="usuarioOEmail" (input)="actualizarTipoEntrada()">
+                         
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <br />
+                <div class="example-container">
+                    <mat-form-field class="inputLogin">
+
+                        <mat-label>Ingrese contraseña</mat-label>
+                       
+                        <input matInput  [type]="hide ? 'password' : 'text'"  [(ngModel)]="usuario.password" required>
+                           
+                        <button mat-icon-button matSuffix  (click)="hide = !hide" [attr.aria-label]="'Hide password'"  [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' :'visibility'}}</mat-icon>
+                        </button>
+
+                    </mat-form-field>
+                 </div>
+                 
+                  <section >
+                    <div class="container-boton">
+                      <button  mat-flat-button   (click)="ingresarApi()"  [disabled]="usuarioOEmail == '' || usuario.password == '' "  >Iniciar Sesion</button>
+                    </div>
+                  </section>
+                
+            </div> <!--CARD REGITRO -->
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,155 @@
+//VARIABLES
+$fondo-container-registro: rgb(238, 238, 238) ;
+$verde-agua:#57f3a8 ;
+$verde-agua-hover:#50f3a4;
+$rojo-tomate:#da4040;
+
+
+// CONTENDOR PRINCIPAL
+.container-padre{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 75%;
+    height: 50rem;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 3rem;
+    background-color: $fondo-container-registro;
+}
+
+//DIVISION DE CONTENEDOR , DERECHA REGISTER Y  LA PREGUNTA SI ES QUE ESTA LOGUEADO
+
+.container-login{
+    width: 26rem;
+    height: 42rem;
+    border-radius: 15px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;       
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    -webkit-animation: bounce-down 1.6s linear infinite;
+    animation: bounce-down 1.6s linear infinite;
+}
+
+//----------------------------- TEXTOS 
+.txt-h2{
+    margin: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.container-login .txt-h2{
+    margin-top:4rem;
+    color:rgb(2, 39, 66)  ;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.container-login .txt-h3{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.olvide-h3{
+    margin-left: 7.5rem;
+    color: rgb(72, 101, 165);
+}
+.olvide-h3:hover{
+    color: rgb(106, 141, 217);
+    cursor: pointer;
+}
+
+// ---- CUERPO
+.container-input .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+  }
+  
+//****** INPUT *****
+mat-form-field{
+    height: 4.5rem;
+    width: 17rem;
+    margin-top: 0.5rem;
+}
+    
+//---------------- EFECTO FLOTANTE 
+@-webkit-keyframes bounce-down {
+    25% {
+         -webkit-transform: translateY(-4px);
+    }
+    50%, 100% {
+         -webkit-transform: translateY(0);
+    }
+    75% {
+         -webkit-transform: translateY(4px);
+    }
+}
+
+@keyframes bounce-down {
+     25% {
+          transform: translateY(-4px);
+     }
+     50%, 100% {
+          transform: translateY(0);
+     }
+     75% {
+          transform: translateY(4px);
+     }
+}
+
+//********************** input contraseña ******************/
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+
+// BTON REGISTRARSE
+.container-boton{
+    text-align: center;
+ 
+  }
+  .container-boton button{
+      width:  14rem;
+      margin-top:2rem;
+      padding: 1.3rem;
+      margin-right: 10%;
+      background-color: $verde-agua;
+      color  :rgb(0, 0, 0);
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;    
+    }
+      
+  
+
+  .container-boton button:hover{
+    background-color: $verde-agua-hover;
+    
+}
+
+.registro-h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 14px;
+}
+  
+  

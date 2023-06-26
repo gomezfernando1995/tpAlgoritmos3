@@ -1,0 +1,24 @@
+<mat-toolbar *ngIf="this.authService.botonesNav" class="contenedor_navbar" >
+      <!-- TITULO -->
+    <div class="nav_titulo">
+        <span>AutoPilot</span>
+    </div>
+    <!-- PEGADOS AL TITULO - BOTONES NAV -->
+    <div *ngIf="this.authService.botonesNav" >
+        <a mat-button class="btn_nav" routerLink="bienvenido">Inicio</a>
+
+        <a mat-button class="btn_nav"routerLink=".">Nosotros</a>
+    
+        <a mat-button class="btn_nav" routerLink=".">Contacto</a>
+        <a mat-button class="btn_nav" routerLink="**">Error</a>
+        <!--  A LA DERECHA - BOTONES LOGIN Y REGISTRO -->
+    </div>
+        
+    <span class="orientacion_derecha"></span>
+    <div *ngIf="this.authService.botonesNav">
+        <a  mat-raised-button class="btn_acceder"  routerLink="login" > Iniciar Sesion</a>
+        <a  mat-raised-button class="btn_acceder registro mr"  routerLink="registrar" >Registrarse</a>
+    </div>
+    <a  *ngIf="!this.authService.botonesNav" mat-raised-button class="btn_acceder registro mr"  (click)="cerrarSesion()" >Cerrar sesion</a>
+       
+</mat-toolbar>

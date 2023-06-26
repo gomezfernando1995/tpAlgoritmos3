@@ -1,0 +1,145 @@
+//VARIABLES
+$fondo-container-registro: rgb(238, 238, 238);
+$verde-agua: #57f3a8;
+$verde-agua-hover: #50e99f;
+$rojo-tomate: #da4040;
+
+// CONTENDOR PRINCIPAL
+.container-register {
+  display: flex;
+  margin: auto;
+  width: 75%;
+  height: 50rem;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: $fondo-container-registro;
+}
+
+//DIVISION DE CONTENEDOR , DERECHA REGISTER Y  LA PREGUNTA SI ES QUE ESTA LOGUEADO
+
+.container-uno {
+  width: 50%;
+  height: 95%;
+  background-color: $fondo-container-registro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-dos {
+  width: 50%;
+  height: 95%;
+  background-color: $fondo-container-registro;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//CARD  PREGUNTA DE USUARIO
+
+.card-preguntaUsuario {
+  width: 75%;
+  height: 85%;
+  margin-left: 4rem;
+  background-color: rgb(235, 235, 235);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 4px;
+}
+
+// CARD DE REGISTRO
+
+.card-registro {
+  width: 60%;
+  height: 100%;
+  margin-left: 7rem;
+  background-color: $fondo-container-registro;
+  border-radius: 10px;
+}
+// ---- CABEZERA de  CARD DE REGISTRO
+
+.card-form-cabezera {
+  text-align: center;
+  margin-right: 5.5rem;
+}
+.txt-h2 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.txt-h3 {
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+// ---- CUERPO
+.card-form-cuerpo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+//****** INPUT *****
+mat-form-field {
+  height: 4.5rem;
+  width: 22rem;
+  margin: 3px;
+}
+
+// BTON REGISTRARSE
+.container-boton {
+  text-align: center;
+}
+.container-boton button {
+  width: 67%;
+  margin-top: 0.5rem;
+  padding: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-right: 10%;
+  background-color: $verde-agua;
+  color: black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.container-boton button:hover {
+  background-color: $verde-agua-hover;
+}
+
+//********************** input contraseña ******************/
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+/*****************************************************************/
+
+//********************** checket  terminos y condiciones ******************/
+.check-terminosCondiciones {
+  display: flex;
+  flex-direction: row;
+  width: 83%;
+  margin: 10px;
+}
+
+.check-terminosCondiciones h2 {
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  line-height: normal;
+
+  margin: 7px 0;
+}
+//***************************************************************************/

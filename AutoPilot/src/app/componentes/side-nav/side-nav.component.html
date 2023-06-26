@@ -1,0 +1,93 @@
+<mat-drawer-container class="main-container">
+  <mat-drawer  class="sidebar"   mode="side" opened>
+    <div class="sidebar-img">
+      <img appCambiarCursor appImgError mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"  alt="Image of a Shiba Inu">
+    </div>
+
+    <div class="div-sidebar">
+      
+      <!-- <a mat-button class="btn_nav" routerLink="/"><mat-icon>view_quilt</mat-icon></a>
+      <a mat-button class="btn_nav"routerLink="/">lorem</a>
+      <a mat-button class="btn_nav" routerLink="/">lorem</a> -->
+      <a mat-button class="btn_nav" routerLink="/" (click)="salir()">salir</a>
+
+    </div>
+        
+   </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="container-header">
+      <!-- <mat-icon style="font-size: 30px;">navigate_before</mat-icon> -->
+      <h2> Bienvienvenido Pepe </h2>
+
+      <!-- <form class="container-buscador">
+        <mat-form-field class="form-buscador">
+          <mat-label>Buscar</mat-label>
+          <mat-icon matSuffix>mode_edit</mat-icon>
+          <input class="buscador-input" type="tel" matInput
+            placeholder="Ingrese usuario o correo">
+        </mat-form-field>
+      </form> -->
+
+    </div>
+
+
+    <div  class="container-cardAuto" >
+     
+      <mat-card *ngFor="let coche of this.coches " appCambiarCursor class="card">
+        <app-coche  [miCoche]="coche"></app-coche>  
+      </mat-card>
+      <mat-card appCambiarCursor class="card add">
+      
+        <mat-card-content>
+          <!-- <mat-icon class="icono-agregar">add</mat-icon> -->
+          <img class="card-addCar-img"  src="https://cdn-icons-png.flaticon.com/512/287/287842.png?w=826&t=st=1687804646~exp=1687805246~hmac=bd9fe7467df390cc882592dcdba435b1f9f9138a58c7dcad90525222f38e2552" alt="">
+        </mat-card-content>
+      </mat-card>
+  
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- <div class="container-sidebar"> sidebar
+    <a mat-button class="btn_nav" routerLink="bienvenido">Inicio</a>
+
+        <a mat-button class="btn_nav"routerLink=".">Nosotros</a>
+    
+        <a mat-button class="btn_nav" routerLink=".">Contacto</a>
+  </div>
+  <div class="container-main">
+    
+    
+    <div class="header">
+      sector del header
+
+
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        fontIcon="home"></mat-icon>
+
+
+      <form class="container-buscador">
+        <mat-form-field class="form-buscador">
+          <mat-label>Buscar</mat-label>
+          <mat-icon matSuffix>mode_edit</mat-icon>
+          <input class="buscador-input" type="tel" matInput placeholder="Ingrese usuario o correo">
+
+          
+        </mat-form-field>
+      </form>
+      <div>
+ <mat-form-field class="example-full-width">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi">
+      </mat-form-field>
+      </div>
+     
+    
+    </div>
+  
+    contenerdor principal
+  
+  </div>
+   -->

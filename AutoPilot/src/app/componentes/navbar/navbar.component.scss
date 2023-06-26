@@ -1,0 +1,44 @@
+$verde-agua:#57f3a8 ;
+$rojo-tomate:#da4040;
+
+
+.contenedor_navbar{
+  background-color:#012b4b72;
+  color: $verde-agua;
+}
+
+.nav_titulo {
+  margin: 7rem;
+  font-size: 2rem;
+}
+.orientacion_derecha{
+  flex: 1 1 auto;
+}
+.mr{
+    margin-right: 3 rem;
+}
+// 3 BOTONES PRINCIPALES
+.btn_nav {
+    border-radius: 10%;
+    height: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+// BTN DE ACCESO
+.btn_acceder{
+    margin: 1rem;
+    font-weight: 500; 
+    font-size: 1rem; 
+    background-color: $verde-agua!important;
+    color: white;
+}
+// BTN DE REGISTRO
+.registro{
+    background-color:$rojo-tomate!important;
+    color: rgb(255, 255, 255) !important;
+    
+}
+
